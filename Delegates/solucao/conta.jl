@@ -8,5 +8,5 @@ end
 
 getSaldo(conta::tp_Conta) = conta.saldo
 
-converter(conta::tp_Conta, conversor::Any) = getSaldo(conta) * getValor(conversor)
-#agora a classe conta nao precisa mais se preocupar com o valor da moeda estrangeira, ela chama conversor que é quem tem essa responsabilidade.
+converter(conta::tp_Conta, conversor::Any) =  converterMoeda(getSaldo(conta), conversor)
+#agora a classe conta nao precisa mais se preocupar converter, ela chama conversor que é quem tem essa responsabilidade.

@@ -4,4 +4,4 @@ abstract type ConversorEuro end
 
 mutable struct tp_ConversorEuro <: ConversorEuro end
 
-getValor(conversor::tp_ConversorEuro) = 5.11 #valor atual do euro no momento do codigo
+converterMoeda(saldo::Float16,conversor::tp_ConversorEuro) = saldo * 5.11 #valor atual do euro no momento do codigo
