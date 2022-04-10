@@ -1,4 +1,4 @@
-#considerando uma classe que retorne nosso saldo em diferentes moedas
+#considerando uma classe Conta que retorne o saldo em diferentes moedas
 
 abstract type Conta end
 
