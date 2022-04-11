@@ -10,4 +10,5 @@ getSaldo(conta::tp_Conta) = conta.saldo
 
 converterDolar(conta::tp_Conta) = getSaldo(conta) * 4.7
 converterEuro(conta::tp_Conta) = getSaldo(conta) * 5.11
-#para cada moeda que adicionar devemos entao criar um metodo novo, isso nao é uma boa pratica.
+# para cada moeda que adicionar devemos entao criar um metodo novoCpf
+# nao é uma boa pratica, a conta teria que se responsabilizar pela conversao de diversas moedas.
