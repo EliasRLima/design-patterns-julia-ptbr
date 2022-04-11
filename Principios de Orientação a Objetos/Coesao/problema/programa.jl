@@ -12,7 +12,7 @@ mutable struct tp_Programa <: Programa
     produtosVendas::Vector{Vector{Any}}
 end
 
-tp_Programa(p::Nothing, pVendas::Nothing) = tp_Programa([],[])
+tp_Programa() = tp_Programa([],[])
 
 function carregaProdutos(programa::tp_Programa)
     #pode vir de banco de dados, arquivos, etc
@@ -37,3 +37,4 @@ function imprimeFormulario(programa::tp_Programa)
 end
 
 # fica claro que a classe Programa esta com muitas responsabilidades certo? Ela deve carregar produtos, calcular valor vendas e ainda montar o formulario
+

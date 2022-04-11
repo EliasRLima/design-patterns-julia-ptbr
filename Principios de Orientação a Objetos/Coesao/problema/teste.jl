@@ -4,7 +4,7 @@
 #Para demonstrar que seu codigo funciona ele criou o seguinte teste
 include("programa.jl")
 
-programa = tp_Programa([], [])
+programa = tp_Programa()
 carregaProdutos(programa)
 calculaValorVendas(programa)
 imprimeFormulario(programa)
