@@ -39,7 +39,7 @@ abstract type LiderTecnico_2 end
 abstract type Gestor_2 end
 
 #A correcao feita aqui foi simplificar a relação de herança, dessa forma o acoplamento ficará reduzido
-#Pegando o exemplo do LiderTecnico novamente, não tem porque trata-lo como Senior visto podemos especializar Funcionario diretamente como LiderTecnico eliminar
+#Pegando o exemplo do LiderTecnico novamente, não tem porque trata-lo como Senior visto podemos especializar Funcionario diretamente como LiderTecnico
 #Ja ficara subentendido sua capacidade. Desta forma, o acoplamento entre Senior e LiderTecnico fica quase inexistente, ou seja, agora alterações não irá sair desencadeando mudanças em diversas classe
 
 
