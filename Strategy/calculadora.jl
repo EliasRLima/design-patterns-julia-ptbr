@@ -17,21 +17,21 @@ mutable struct tp_Calculadora <: Calculadora
 end
 
 function actionSoma(calculadora::tp_Calculadora)
-     calculadora.contexto = tp_operacaoSoma
+     setEstrategia(calculadora.contexto, tp_operacaoSoma)
 end
 
 function actionSubtracao(calculadora::tp_Calculadora)
-    calculadora.contexto = tp_operacaoSub
+    setEstrategia(calculadora.contexto, tp_operacaoSub)
 end
 
 function actionMultiplicacao(calculadora::tp_Calculadora)
-    calculadora.contexto = tp_operacaoMult
+    setEstrategia(calculadora.contexto, tp_operacaoMult)
 end
 
 function actionDivisao(calculadora::tp_Calculadora)
-    calculadora.contexto = tp_operacaoDiv
+    setEstrategia(calculadora.contexto, tp_operacaoDiv)
 end
 
 function executarAction(calculadora::tp_Calculadora, a::float16, b::float16)
-    return execute(calculadora.contexto, a, b)
+    return executeEstrategia(calculadora.contexto, a, b)
 end

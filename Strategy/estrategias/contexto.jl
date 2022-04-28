@@ -22,6 +22,6 @@ end
 # ao invés de implementar múltiplas versões do algoritmo
 # por conta própria.
 
-function execute(contexto::tp_contexto, a::float16, b::float16) 
+function executeEstrategia(contexto::tp_contexto, a::float16, b::float16) 
     return execute(contexto.estrategia, a, b)
 end
