@@ -8,7 +8,6 @@ mutable struct tp_csv <: FormatoCSV
     super::tp_formatochain
 end
 
-tp_csv(Nothing()) = tp_csv()
 tp_csv() = tp_csv(tp_formatochain(Nothing())) #nao tem proximo
 getSuper(formato::tp_csv) = formato.super
 

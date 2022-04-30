@@ -9,8 +9,7 @@ mutable struct tp_xml <: FormatoXML
     super::tp_formatochain
 end
 
-tp_xml(Nothing()) = tp_xml()
-tp_xml() = tp_xml(tp_formatochain(tp_xml(Nothing())))
+tp_xml() = tp_xml(tp_formatochain(tp_csv()))
 getSuper(formato::tp_xml) = formato.super
 
 #override

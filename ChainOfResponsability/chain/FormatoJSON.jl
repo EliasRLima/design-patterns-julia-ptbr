@@ -9,8 +9,7 @@ mutable struct tp_json <: FormatoJSON
     super::tp_formatochain
 end
 
-tp_json(Nothing()) = tp_json()
-tp_json() = tp_json(tp_formatochain(tp_xml(Nothing()))) #prox é xml
+tp_json() = tp_json(tp_formatochain(tp_xml())) #prox é xml
 getSuper(formato::tp_json) = formato.super
 
 #override
