@@ -1,4 +1,3 @@
-include("FormatoChain.jl")
 include("../Formato.jl")
 include("../Conta.jl")
 include("FormatoXML.jl")
@@ -6,10 +5,10 @@ include("FormatoXML.jl")
 abstract type FormatoJSON end
 
 mutable struct tp_json <: FormatoJSON
-    super::tp_formatochain
+    super::tp_xml
 end
 
-tp_json() = tp_json(tp_formatochain(tp_xml())) #prox é xml
+tp_json() = tp_json(tp_xml()) #prox é xml
 getSuper(formato::tp_json) = formato.super
 
 #override
@@ -31,7 +30,7 @@ function getFormatado(formato::tp_json,requisicao::tp_requisicao, conta::tp_Cont
         if getNext(getSuper(formato)) == Nothing()
             return "Formato nao localizado.";
         else
-            return getFormatado(getNext(getSuper(formato)), requisicao, conta)
+            return getFormatado(getSuper(formato), requisicao, conta)
         end
     end
     

@@ -1,4 +1,3 @@
-include("../Requisicao.jl")
 
 abstract type FormatoChain end
 

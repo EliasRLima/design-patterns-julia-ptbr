@@ -1,4 +1,3 @@
-include("FormatoChain.jl")
 include("../Formato.jl")
 include("../Conta.jl")
 include("FormatoCSV.jl")
@@ -6,10 +5,10 @@ include("FormatoCSV.jl")
 abstract type FormatoXML end
 
 mutable struct tp_xml <: FormatoXML
-    super::tp_formatochain
+    super::tp_csv
 end
 
-tp_xml() = tp_xml(tp_formatochain(tp_csv()))
+tp_xml() = tp_xml(tp_csv())
 getSuper(formato::tp_xml) = formato.super
 
 #override
@@ -31,7 +30,7 @@ function getFormatado(formato::tp_xml,requisicao::tp_requisicao, conta::tp_Conta
         if getNext(getSuper(formato)) == Nothing()
             return "Formato nao localizado.";
         else
-            return getFormatado(getNext(getSuper(formato)), requisicao, conta)
+            return getFormatado(getSuper(formato), requisicao, conta)
         end
     end
     

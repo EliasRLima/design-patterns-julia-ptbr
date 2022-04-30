@@ -5,10 +5,10 @@ include("../Conta.jl")
 abstract type FormatoCSV end
 
 mutable struct tp_csv <: FormatoCSV
-    super::tp_formatochain
+    super::Any
 end
 
-tp_csv() = tp_csv(tp_formatochain(Nothing())) #nao tem proximo
+tp_csv() = tp_csv(nothing) #nao tem proximo
 getSuper(formato::tp_csv) = formato.super
 
 #override
