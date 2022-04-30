@@ -7,4 +7,3 @@ mutable struct tp_formatochain <: FormatoChain
 end
 
 getNext(chain::tp_formatochain) = chain.nextChain
-
