@@ -5,7 +5,7 @@ include("FormatoCSV.jl")
 abstract type FormatoXML end
 
 mutable struct tp_xml <: FormatoXML
-    super::tp_csv
+    super::Union{Any, tp_csv}
 end
 
 tp_xml() = tp_xml(tp_csv())

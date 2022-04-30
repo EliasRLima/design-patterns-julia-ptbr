@@ -5,7 +5,7 @@ include("FormatoXML.jl")
 abstract type FormatoJSON end
 
 mutable struct tp_json <: FormatoJSON
-    super::tp_xml
+    super::Union{Any,tp_xml}
 end
 
 tp_json() = tp_json(tp_xml()) #prox é xml

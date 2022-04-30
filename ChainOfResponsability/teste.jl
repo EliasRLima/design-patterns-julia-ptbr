@@ -11,3 +11,4 @@ requisicaoXml = tp_requisicao(xml)
 requisicaoCsv = tp_requisicao(csv)
 
 print("Formato JSON: " * getFormatado(controlador, requisicaoJson, conta))
+
