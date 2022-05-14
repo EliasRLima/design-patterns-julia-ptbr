@@ -1,0 +1,1 @@
+#Neste exemplo, o padrão Template Method fornece um “esqueleto” para várias ramificações de redes sociais
