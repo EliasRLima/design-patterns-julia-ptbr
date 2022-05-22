@@ -1,3 +1,4 @@
+include("positiva.jl")
 
 abstract type Negativa end
 
@@ -15,6 +16,6 @@ function depositar(estadoConta::tp_negativa,valor)
     conta.setSaldo(novosaldo);
 
     if novosaldo > 0
-        estadoConta.conta.mudaEstado(tp_positiva(conta));
+        estadoConta.conta.mudaEstado(conta, tp_positiva(conta));
     end
 end
